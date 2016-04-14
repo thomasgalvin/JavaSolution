@@ -37,10 +37,10 @@ public class Sums
     
     private double recursiveSum( double[] numbers, int index ) {
         double result = 0;
+        result += numbers[index];
         
+        index++;
         if( index < numbers.length ){
-            result += numbers[index];
-            index++;
             result += recursiveSum( numbers, index );
         }
         
