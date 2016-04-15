@@ -19,14 +19,14 @@ public class BugReportComparator implements Comparator<BugReport>
 
     @Override
     public int compare( BugReport bugOne, BugReport bugTwo ) {
-        if( bugOne == null && bugTwo != null ){
+        if(bugOne == null && bugTwo == null) {
+            return 0;
+        } 
+        else if(bugOne == null) {
             return 1;
         } 
-        else if( bugOne != null && bugTwo == null ){
+        else if(bugTwo == null) {
             return -1;
-        }
-        else if( bugOne == null && bugTwo == null ){
-            return 0;
         }
         
         Severity severityOne = bugOne.getSeverity();
@@ -42,14 +42,14 @@ public class BugReportComparator implements Comparator<BugReport>
     }
     
     private int compare( Severity severityOne, Severity severityTwo ) {
-        if( severityOne == null && severityTwo != null ){
+        if( severityOne == null && severityTwo == null ){
+            return 0;
+        }
+        else if( severityOne == null ){
             return 1;
         } 
-        else if( severityOne != null && severityTwo == null ){
+        else if( severityTwo == null ){
             return -1;
-        }
-        else if( severityOne == null && severityTwo == null ){
-            return 0;
         }
         
         // higher severities have higher ordinals, but should come first in the
@@ -59,14 +59,14 @@ public class BugReportComparator implements Comparator<BugReport>
     }
     
     private int compare( Urgency urgencyOne, Urgency urgencyTwo ) {
-        if( urgencyOne == null && urgencyTwo != null ){
+        if( urgencyOne == null && urgencyTwo == null ){
+            return 0;
+        }
+        else if( urgencyOne == null ){
             return 1;
         } 
-        else if( urgencyOne != null && urgencyTwo == null ){
+        else if( urgencyTwo == null ){
             return -1;
-        }
-        else if( urgencyOne == null && urgencyTwo == null ){
-            return 0;
         }
         
         // higher urgencies have higher ordinals, but should come first in the
