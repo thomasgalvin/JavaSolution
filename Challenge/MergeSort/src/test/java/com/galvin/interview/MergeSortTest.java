@@ -8,18 +8,18 @@ import org.junit.Test;
 
 public class MergeSortTest
 {
-//    @Test
-//    public void testMergesortPresorted() throws Exception {
-//        List<Integer> target = getTestData();
-//        doMergeSort( target );
-//    }
-//    
-//    @Test
-//    public void testMergesortBackwards() throws Exception {
-//        List<Integer> target = getTestData();
-//        Collections.reverse( target );
-//        doMergeSort( target );
-//    }
+    @Test
+    public void testMergesortPresorted() throws Exception {
+        List<Integer> target = getTestData();
+        doMergeSort( target );
+    }
+    
+    @Test
+    public void testMergesortBackwards() throws Exception {
+        List<Integer> target = getTestData();
+        Collections.reverse( target );
+        doMergeSort( target );
+    }
     
     @Test
     public void testMergesortShuffle() throws Exception {
@@ -28,24 +28,24 @@ public class MergeSortTest
         doMergeSort( target );
     }
     
-//    @Test
-//    public void testMergesortDuplicates() throws Exception {
-//        List<Integer> target = new ArrayList();
-//        target.addAll( getTestData() );
-//        target.addAll( getTestData() );
-//        target.addAll( getTestData() );
-//        target.addAll( getTestData() );
-//        target.addAll( getTestData() );
-//        Collections.shuffle( target );
-//        doMergeSort( target );
-//    }
+    @Test
+    public void testMergesortDuplicates() throws Exception {
+        List<Integer> target = new ArrayList();
+        target.addAll( getTestData() );
+        target.addAll( getTestData() );
+        target.addAll( getTestData() );
+        target.addAll( getTestData() );
+        target.addAll( getTestData() );
+        Collections.shuffle( target );
+        doMergeSort( target );
+    }
     
-//    @Test
-//    public void testMergesortRandom() throws Exception {
-//        for( int i = 0; i < 1000; i++ ){
-//            doRandomMergeSort();
-//        }
-//    }
+    @Test
+    public void testMergesortRandom() throws Exception {
+        for( int i = 0; i < 1000; i++ ){
+            doRandomMergeSort();
+        }
+    }
     
     private List<Integer> getTestData(){
         List<Integer> target = new ArrayList();

@@ -24,9 +24,7 @@ public class MergeSort {
             return;
         }
 
-        System.out.println("\n\n\n\n\n\n\n");
-        System.out.println("==============");
-        List<Integer> result = doSort(target, 0, target.size() );
+        List<Integer> result = doSort(target);
         target.clear();
         target.addAll(result);
     }
@@ -37,39 +35,31 @@ public class MergeSort {
      * @param start
      * @param end 
      */
-    private List<Integer> doSort( List<Integer> target, int start, int end ){
-        if( end >= target.size() ){
-            return new ArrayList();
-        }
-        
-        if( end - start < 1 ){
-            System.out.println("end of recursion: start: " + start + " end: " + end);
-            return new ArrayList();
-        }
-        
-        int middle = (end - start) / 2 + start;
-        if( middle <= start ){
-            System.out.println("end of recursion: start: " + start + " end: " + end + " middle: " + middle);
-            return new ArrayList();
+    private List<Integer> doSort( List<Integer> target ){
+        if( target.size() < 2 ){
+            return target;
         }
         
         List<Integer> left = new ArrayList();
         List<Integer> right = new ArrayList();
         
-        for( int i = start; i < middle; i++ ){
-            left.add( target.get(i));
+        int middle = target.size() / 2;
+        
+        for( int i = 0; i < middle; i++ ){
+            left.add( target.get(i) );
         }
         
-        for( int i = middle; i < end; i++ ){
+        for(int i = middle; i < target.size(); i++ ){
             right.add( target.get(i) );
         }
         
-        doSort( left, 0, left.size() );
-        doSort( right, 0, right.size() );
+        left = doSort(left);
+        right = doSort(right);
         return merge(left, right);
     }
 
     private List<Integer> merge( List<Integer> left, List<Integer> right ){
+        
         List<Integer> result = new ArrayList();
         
         while( !left.isEmpty() && !right.isEmpty() ){
