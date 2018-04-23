@@ -8,8 +8,7 @@ public class FindPrimesTest
 {
     public static final String ERROR = "Incorrect list of primes";
     
-    @Test
-    public void testArrayMerge() throws Exception{
+    @Test public void testFindPrimes() throws Exception{
         FindPrimes findPrimes = new FindPrimes();
         int[] result = findPrimes.findPrimes();
         int[] expected = findPrimes();

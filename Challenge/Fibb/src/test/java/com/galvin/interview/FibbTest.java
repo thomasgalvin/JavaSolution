@@ -8,8 +8,7 @@ public class FibbTest
 {
     public static final String FIBONACCI_FAILURE = "Incorrect Fibonacci sequence";
     
-    @Test
-    public void testArrayMerge() throws Exception{
+    @Test public void testFibb() throws Exception{
         Fibb fibb = new Fibb();
         int[] result = fibb.fibb();
         int[] expected = getFibb();

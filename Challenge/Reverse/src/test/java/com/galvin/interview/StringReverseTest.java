@@ -7,8 +7,7 @@ public class StringReverseTest
 {
     public static final String INCORRECT_REVERSE = "The String was not properly reversed";
     
-    @Test
-    public void testStringReverse() throws Exception{
+    @Test public void testStringReverse() throws Exception{
         StringReverse reverse = new StringReverse();
         reverse( reverse, "Hello, world!" );
         reverse( reverse, "Now is the time for all good men to come to the aid of their country." );
