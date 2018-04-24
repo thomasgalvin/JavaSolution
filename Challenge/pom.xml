@@ -8,7 +8,7 @@
     </parent>
     <groupId>galvin.interview</groupId>
     <artifactId>Challenge</artifactId>
-    <name>Java Challenge: Questions Master</name>
+    <name>Java Challenge: Solutions Master</name>
     <packaging>pom</packaging>
     
     <modules>
