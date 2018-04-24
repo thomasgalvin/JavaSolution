@@ -6,8 +6,12 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * The purpose of this exercise is to find all of the vowels in a given string. For the purpose of this
- * exercise, 'y' does **not** count as a vowel.
+ * The purpose of this exercise is to find all of the vowels in a given string.
+ *
+ * There are two methods: one counts all the letters in a string tha are vowels, and the second
+ * counts how many unique vowels are in a string. Implement both methods.
+ *
+ * For the purpose of this exercise, 'y' does **not** count as a vowel.
  */
 public class FindVowels {
     private static final Set<Character> VOWELS = new HashSet<>();
