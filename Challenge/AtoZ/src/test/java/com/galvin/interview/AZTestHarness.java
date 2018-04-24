@@ -2,7 +2,7 @@ package com.galvin.interview;
 
 import org.junit.Assert;
 
-public class TestHarness {
+public class AZTestHarness {
     public static final String[] CORRECT_UPPERCASE = {
             "Aqfw",
             "By5eyh",
