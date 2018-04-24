@@ -10,7 +10,10 @@ import java.util.Set;
  * exercise, 'y' does **not** count as a vowel.
  */
 public class FindVowels {
-    private static final String VOWELS = "aeiou";
+    private static final Set<Character> VOWELS = new HashSet<>();
+    static{
+        for( char c: "aeiou".toCharArray() ) VOWELS.add(c);
+    }
 
     /**
      * This method simply counts each letter in the string that is a vowel. Repeated vowels are counted.
@@ -25,7 +28,7 @@ public class FindVowels {
 
         int count = 0;
         for( char c: lower.toCharArray() ){
-            if( VOWELS.contains( "" + c ) ) count++;
+            if( isVowel(c) ) count++;
         }
         return count;
     }
@@ -43,9 +46,13 @@ public class FindVowels {
 
         Set<Character> set = new HashSet<>();
         for( char c: lower.toCharArray() ){
-            if( VOWELS.contains( "" + c ) ) set.add(c);
+            if( isVowel(c) ) set.add(c);
         }
 
         return set.size();
+    }
+
+    private boolean isVowel(char c){
+        return VOWELS.contains(c);
     }
 }
