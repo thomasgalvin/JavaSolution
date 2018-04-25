@@ -21,6 +21,7 @@ package com.galvin.interview;
  */
 public class Palindrome {
     private static final char space = ' ';
+    
     /**
      * This method returns true if and only if:
      *   1. the text reads the same forwards and backwards, ignoring case
